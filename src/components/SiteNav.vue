@@ -29,7 +29,7 @@ onUnmounted(() => observer?.disconnect())
     <div class="wrap nav__bar">
       <a class="skip-link" href="#top">Skip to content</a>
       <a class="nav__logo" href="#top">
-        <span class="mark mark--initial" aria-hidden="true">T</span>Teerawit
+        <span class="mark mark--initial mark--initials" aria-hidden="true">TJ</span>Teerawit
       </a>
       <nav class="nav__links" aria-label="Main">
         <div v-for="section in sections" :key="section.id" class="nav__item">

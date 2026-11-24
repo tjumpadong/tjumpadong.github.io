@@ -3,6 +3,14 @@ html {
   scroll-padding-top: 0;
 }
 
+/* two initials need a little more room than one */
+.nav__logo .mark--initials {
+  width: 24px;
+  height: 24px;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+
 /* scrollspy: the kit draws [aria-current="page"]; in-page sections use "location" */
 .nav__link[aria-current="location"]::after {
   content: "";
