@@ -1,0 +1,166 @@
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: 0;
+}
+
+/* scrollspy: the kit draws [aria-current="page"]; in-page sections use "location" */
+.nav__link[aria-current="location"]::after {
+  content: "";
+  position: absolute;
+  left: var(--s-3);
+  right: var(--s-3);
+  bottom: -2px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .nav__link[aria-current="location"]::after {
+    left: var(--s-2);
+    right: var(--s-2);
+  }
+}
+
+/* a button that carries the kit's text-link look */
+.link--button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* earlier roles: a phone-only disclosure */
+.experience-earlier {
+  margin-top: var(--s-6);
+}
+
+.experience-earlier > summary {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .experience-earlier {
+    margin-top: var(--s-5);
+    border-top: 1px solid var(--line);
+    padding-top: var(--s-4);
+  }
+
+  .experience-earlier > summary {
+    display: block;
+    font-size: var(--t-body);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .experience-earlier[open] > .grid {
+    margin-top: var(--s-5);
+  }
+}
+
+.print-email {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  header.nav,
+  .nav__toggle,
+  .btn,
+  .closing__cta > .btn,
+  .footer__legal,
+  .experience-earlier > summary {
+    display: none !important;
+  }
+
+  main > section,
+  footer.closing {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-block: 6mm !important;
+  }
+
+  .hero {
+    padding-top: 0 !important;
+    padding-bottom: 6mm !important;
+  }
+
+  .hero__facts {
+    margin-top: 6mm;
+  }
+
+  .hero__facts dt,
+  .t-label,
+  .t-small {
+    color: #444 !important;
+  }
+
+  .hero__lead {
+    max-width: none !important;
+  }
+
+  .mo-wh .mo-w,
+  .mo-wh strong .mo-w {
+    color: #000 !important;
+    transition: none !important;
+  }
+
+  .section-head {
+    margin-bottom: 4mm !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  .checks li,
+  .grid > div {
+    break-inside: avoid;
+  }
+
+  .print-email {
+    display: inline !important;
+  }
+
+  .experience-earlier {
+    margin-top: 3mm !important;
+  }
+
+  body {
+    font-size: 10.5pt;
+  }
+
+  h1 {
+    font-size: 22pt !important;
+  }
+
+  h2 {
+    font-size: 16pt !important;
+  }
+
+  h3,
+  .t-card {
+    font-size: 11.5pt !important;
+  }
+
+  .footer__col h3 {
+    margin-bottom: 2mm;
+  }
+
+  .card {
+    border: 0 !important;
+  }
+}
