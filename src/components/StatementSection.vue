@@ -4,8 +4,8 @@
       <p class="t-label">Summary</p>
       <p class="mo-wh__text">
         Most of the work is invisible: a consent migration that made tracking accurate, a CI
-        pipeline that stopped failing, a page that loads faster. Ten years of making the boring
-        parts <strong>reliable</strong>.
+        pipeline that stopped failing, a page that loads faster. Ten years of making the parts
+        people never see <strong>reliable</strong>.
       </p>
 
       <div class="grid">
