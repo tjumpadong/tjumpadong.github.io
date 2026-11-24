@@ -22,6 +22,16 @@ html {
   }
 }
 
+/* inside the phone sheet the mark is a short line on the left, as the kit draws a page */
+@media (max-width: 1023px) {
+  .nav.is-open .nav__link[aria-current="location"]::after {
+    left: 0;
+    right: auto;
+    width: 24px;
+    bottom: 10px;
+  }
+}
+
 /* a button that carries the kit's text-link look */
 .link--button {
   background: none;
